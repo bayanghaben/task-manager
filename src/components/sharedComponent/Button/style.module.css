@@ -1,0 +1,46 @@
+.button {
+  background-color: #395bd3;
+  height: 40px;
+  width: 154px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: unset;
+  border-radius: 50px;
+  position: relative; /* To make sure we use relative positioning of the icon */
+}
+.button:hover {
+  /* background: linear-gradient(#5a7dfb, #4f70e8, #2743a5); */
+  background: linear-gradient(90deg, #5a7dfb 0%, #4f70e8 22.15%, #2743a5 100%);
+  box-shadow: 0px 8px 16px 0px #395bd340;
+}
+.button p {
+  color: #fff;
+}
+.button p {
+  margin-left: 10px;
+  transition: opacity 300ms ease-out;
+}
+
+.button:hover p {
+  opacity: 0; /* Hide text on hover */
+}
+
+.button svg {
+  transition: transform 300ms ease-out; /* Add animation for the icon */
+}
+
+@keyframes slideInFromPosition {
+  0% {
+    transform: translateX(0) scale(1); /* Start at original position and small */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100%) scale(1.25); /* Slide to the middle and full size */
+    opacity: 1;
+  }
+}
+
+.button:hover svg {
+  animation: slideInFromPosition 0.5s ease-out forwards; /* Animation with "forwards" to keep the final state */
+}
