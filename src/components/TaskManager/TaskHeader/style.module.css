@@ -3,7 +3,7 @@
   border-radius: 16px;
   height: 100px;
   grid-column: 2 / 12; /* Spans across all 12 columns */
-  grid-row: 2/3;
+  grid-row: 1/2;
   display: flex;
   align-items: center;
   justify-content: space-between;

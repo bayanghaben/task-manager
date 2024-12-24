@@ -1,0 +1,15 @@
+.chip {
+  background: #f6f6ff;
+  border: 1px solid #395bd3;
+  border-radius: 50px;
+  width: 112px;
+  height: 26px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: auto;
+}
+.chip p {
+  color: #395bd3;
+  font-size: 14px;
+}
