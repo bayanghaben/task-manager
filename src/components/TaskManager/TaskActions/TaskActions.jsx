@@ -13,9 +13,6 @@ function TaskActions({
 }) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
-  const handleDropdownToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
   const handleCloseDropdown = (e) => {
     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
       setOpen(false);
