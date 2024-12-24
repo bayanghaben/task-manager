@@ -1,0 +1,16 @@
+.taskActions {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+.iconBtn {
+  background-color: #f6f6ff;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,107 @@
+.complete {
+  background-color: #e1ffde;
+  color: #0a7900;
+}
+.incomplete {
+  background-color: #fff2de;
+  color: #ff6b00;
+}
+.incompleteCircle {
+  background-color: #ff6b00;
+}
+.completeCircle {
+  background-color: #0a7900;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.status {
+  padding: 3px 12px;
+  border-radius: 8px;
+  width: 120px;
+  height: 30px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.5px;
+  cursor: default;
+  text-align: left;
+  position: relative; /* For the arrow positioning */
+  user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
+}
+.arrow {
+  border: solid black;
+  border-radius: 1px;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin-inline: 10px;
+}
+.arrowDown {
+  transform: rotate(45deg);
+  font-weight: 600;
+  display: inline-block;
+  font-size: 14px; /* Adjust the size of the symbol */
+  padding: 5px; /* Adds space around the symbol */
+  border-radius: 50%; /* Makes the background circular */
+  text-align: center; /* Ensures the symbol stays centered */
+  line-height: 1; /* Adjusts the line height for proper centering */
+  transition: background-color 0.3s ease; /* Optional transition effect */
+}
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  background-color: #fff;
+  border-radius: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  z-index: 1000;
+  display: none; /* Hidden by default */
+  box-shadow: 0px 8px 16px 0px #b2b2b240;
+}
+
+.menu.visible {
+  display: block; /* Shown when dropdown is open */
+}
+
+.menu li {
+  font-size: 14px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.selected {
+  background-color: #f7f9ff;
+  border: 1px solid #395bd3;
+  border-radius: 4px;
+}
+.menu li:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.completeCircle {
+  background-color: #0a7900;
+}
+
+.incompleteCircle {
+  background-color: #ff6b00;
+}

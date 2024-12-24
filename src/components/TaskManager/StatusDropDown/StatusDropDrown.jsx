@@ -1,33 +1,47 @@
-import React, { useReducer } from "react";
-import DDL from "../../sharedComponent/DDL/DDL";
+import React, { useState } from "react";
+import styles from "./style.module.css";
 
-function StatusDropDrown({
-  taskId,
-  value,
-  statuses,
-  open,
-  onClose,
-  onStatusChange,
-}) {
+function StatusDropDown({ taskId, value, statuses, onStatusChange }) {
+  const [open, setOpen] = useState(false);
+
+  const handleSelect = (status) => {
+    onStatusChange(taskId, status === "Completed");
+    setOpen(false);
+  };
+  const statusVal = value ? "Completed" : "Incomplete";
+
   return (
-    <select
-      value={value ? "Completed" : "Incomplete"}
-      open={open}
-      onChange={(e) => {
-        console.log(e, "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj//////////////////////");
-        onStatusChange(taskId, e.target.value === "Completed");
-        onClose();
-      }}
-      onClose={onClose}
-    >
-      {statuses?.length > 0 &&
-        statuses?.map((status) => (
-          <option key={status} value={status}>
+    <div className={styles.dropdown}>
+      <p
+        className={`${styles.status} ${
+          value ? styles.complete : styles.incomplete
+        }`}
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        {statusVal}
+        <span className={styles.arrowDown}>&#11262;</span>
+      </p>{" "}
+      {/* Dropdown menu */}
+      <ul className={`${styles.menu} ${open ? styles.visible : ""}`}>
+        {statuses?.map((status) => (
+          <li
+            key={status}
+            onClick={() => handleSelect(status)}
+            className={status === statusVal ? styles.selected : ""}
+          >
+            <div
+              className={`${styles.circle} ${
+                status === "Completed"
+                  ? styles.completeCircle
+                  : styles.incompleteCircle
+              }`}
+            ></div>
             {status}
-          </option>
+          </li>
         ))}
-    </select>
+      </ul>
+    </div>
   );
 }
 
-export default StatusDropDrown;
+export default StatusDropDown;

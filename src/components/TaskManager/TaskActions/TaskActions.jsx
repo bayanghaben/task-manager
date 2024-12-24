@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import StatusDropDrown from "../StatusDropDown/StatusDropDrown";
-
+import Edit from "../../../assets/Edit";
+import styles from "./style.module.css";
+import Delete from "../../../assets/Delete";
 function TaskActions({
   statuses,
   categories,
@@ -28,8 +30,7 @@ function TaskActions({
   }, []);
 
   return (
-    <div>
-      <div onClick={() => handleDropdownToggle(true)}></div>
+    <div className={styles.taskActions}>
       <StatusDropDrown
         taskId={task.id}
         value={task.completed}
@@ -40,13 +41,16 @@ function TaskActions({
         onClose={handleCloseDropdown}
       />{" "}
       <button
+        className={styles.iconBtn}
         onClick={() => {
           onEdit(task);
         }}
       >
-        edit
+        <Edit />
       </button>
-      <button onClick={() => onDelete(task.id)}>delete</button>
+      <button className={styles.iconBtn} onClick={() => onDelete(task.id)}>
+        <Delete />
+      </button>
     </div>
   );
 }
