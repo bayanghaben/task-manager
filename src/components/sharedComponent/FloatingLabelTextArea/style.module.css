@@ -1,0 +1,48 @@
+.formGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 5px;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #8385af;
+  transition: all 0.3s ease;
+  pointer-events: none; /* Prevents clicks on the label */
+}
+
+.textareaField {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  min-height: 100px; /* Adjust the height as needed */
+  resize: none; /* Prevent resizing of the textarea */
+  transition: all 0.3s ease;
+}
+
+.textareaField:focus {
+  border-color: #395bd3;
+}
+
+.textareaField:focus + .label,
+.textareaField:not(:placeholder-shown) + .label {
+  top: 0;
+  left: 10px;
+  font-size: 12px;
+  color: #8385af;
+  background: white;
+  padding: 0 5px;
+}
+.required {
+  color: #fe7c98;
+}

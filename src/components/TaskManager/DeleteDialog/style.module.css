@@ -1,0 +1,57 @@
+.imgContainer {
+  backdrop-filter: blur(150px);
+  background-color: #e6e6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 20px;
+}
+.dialogTitle {
+  color: #0c1049;
+  font-size: 32px;
+  font-weight: 700;
+}
+.dialogTitleWrapper {
+  margin-bottom: 30px;
+}
+.actions {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+}
+.actions button {
+  height: 45px;
+  width: 250px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cancelBtn {
+  background-color: #f2f5ff;
+  color: #395bd3;
+}
+.deleteBtn {
+  color: #fff;
+  background-color: #ff3093;
+}
+.dialogContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #717298;
+  line-height: 20px;
+}
+.dialogContent span {
+  color: #000;
+  font-weight: 600;
+}
+.dialogWrapper {
+  padding: 20px;
+}

@@ -1,11 +1,13 @@
 import "./App.css";
-import TaskManager from "./pages/TaskManager";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import AppRoutes from "./AppRoutes";
 
 function App() {
   return (
-    <>
-      <TaskManager />
-    </>
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
 

@@ -1,17 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import styles from "./Dialog.module.css";
+import { createPortal } from "react-dom";
+import styles from "./style.module.css";
 
-const Dialog = ({ isOpen, onClose, title, children }) => {
+const Dialog = ({ isOpen, children, onClose }) => {
   if (!isOpen) return null;
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose(); // Close the dialog when clicking outside the dialog content
+    }
+  };
 
-  return ReactDOM.createPortal(
-    <div className={styles.overlay}>
+  return createPortal(
+    <div className={styles.overlay} onClick={handleOverlayClick}>
       <div className={styles.dialog}>
-        <h3>{title}</h3>
-        <button className={styles.closeBtn} onClick={onClose}>
-          X
-        </button>
         <div>{children}</div>
       </div>
     </div>,

@@ -1,0 +1,47 @@
+.formGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 5px;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: rgba(77, 77, 77, 0.5);
+  transition: all 0.3s ease;
+  pointer-events: none; /* Prevents clicks on the label */
+}
+
+.inputField {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.inputField:focus {
+  border-color: #395bd3;
+}
+
+.inputField:focus + .label,
+.inputField:not(:placeholder-shown) + .label {
+  top: 0px;
+  left: 10px;
+  font-size: 12px;
+  color: #8385af;
+  border-radius: 8px;
+  background: white;
+  padding: 0 5px;
+}
+.required {
+  color: #fe7c98;
+}

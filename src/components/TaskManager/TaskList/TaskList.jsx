@@ -9,6 +9,8 @@ function TaskList({
   onEdit,
   onDelete,
   onStatusChange,
+  onDeleteCategory,
+  onAddCategory,
 }) {
   return (
     <div className={styles.taskList}>
@@ -21,6 +23,8 @@ function TaskList({
           onStatusChange={onStatusChange}
           categories={categories}
           statuses={statuses}
+          onAddCategory={onAddCategory}
+          onDeleteCategory={onDeleteCategory}
         />
       ))}
     </div>

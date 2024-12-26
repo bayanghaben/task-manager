@@ -9,8 +9,9 @@ function TaskItem({
   onStatusChange,
   onDelete,
   onEdit,
+  onDeleteCategory,
+  onAddCategory,
 }) {
-  console.log(task, onStatusChange, onDelete, onEdit);
   return (
     <div key={task.id} className={`${styles.taskItem}`}>
       <div className={styles.taskContent}>
@@ -29,7 +30,9 @@ function TaskItem({
         onEdit={onEdit}
         onDelete={onDelete}
         onStatusChange={onStatusChange}
-      />{" "}
+        onDeleteCategory={onDeleteCategory}
+        onAddCategory={onAddCategory}
+      />
     </div>
   );
 }

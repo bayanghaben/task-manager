@@ -1,0 +1,50 @@
+/* For the radio input container */
+.label {
+  margin-right: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center; /* Ensure the label and radio button are aligned */
+}
+
+input[type="radio"] {
+  box-sizing: border-box;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #f6f6ff;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+input[type="radio"]:checked {
+  background-color: #fff;
+  border-color: #395bd3;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 51%;
+  left: 52%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #395bd3;
+  transform: translate(-50%, -50%);
+}
+
+input[type="radio"]:not(:checked) {
+  background-color: #f6f6ff;
+  border-color: #f6f6ff;
+}
+
+input[type="radio"]:hover {
+  border-color: #395bd3;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}

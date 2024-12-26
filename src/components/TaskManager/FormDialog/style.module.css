@@ -1,0 +1,42 @@
+.dialogTitle {
+  color: #0c1049;
+  font-size: 32px;
+  font-weight: 700;
+}
+.dialogTitleWrapper {
+  margin-bottom: 30px;
+}
+.actions {
+  display: flex;
+  gap: 30px;
+}
+.actions button {
+  height: 45px;
+  width: 250px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+.cancelBtn {
+  background-color: #f2f5ff;
+  color: #395bd3;
+}
+.submitBtn {
+  color: #fff;
+  background-color: #395bd3;
+}
+
+.formGroup {
+  border: 1px solid #ebecfb;
+}
+.formGroup {
+  height: 50px;
+}
+.formGroupContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form {
+  margin: 20px;
+}

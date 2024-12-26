@@ -44,6 +44,8 @@ export const taskActions = {
   editTask: "EDIT_TASK",
   deleteTask: "DELETE_TASK",
   toggleCompletion: "TOGGLE_TASK_COMPLETION",
+  addCategory: "ADD_CATEGORY", // New action for adding categories
+  deleteCategory: "DELETE_CATEGORY", // New action for deleting categories
 };
 export const taskReducer = (state, action) => {
   switch (action.type) {
@@ -78,6 +80,25 @@ export const taskReducer = (state, action) => {
         ...state,
         filter: { ...state.filter, ...action.payload },
       };
+    case taskActions.addCategory:
+      return {
+        ...state,
+        categories: [...state.categories, action.payload],
+      };
+    case taskActions.deleteCategory:
+      return {
+        ...state,
+        categories: state.categories.filter(
+          (category) => category !== action.payload
+        ),
+        tasks: state.tasks.map((task) => ({
+          ...task,
+          categories: task.categories.filter(
+            (category) => category !== action.payload
+          ),
+        })),
+      };
+
     default:
       throw new Error(`Unknown action type: ${action.type}`);
   }
