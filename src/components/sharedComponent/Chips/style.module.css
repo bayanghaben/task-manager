@@ -6,7 +6,7 @@
   border: 1px solid #395bd3;
   color: #395bd3;
   border-radius: 50px;
-  min-width: 62px;
+  min-width: 100px;
   min-height: 26px;
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -14,9 +14,9 @@
   padding: auto;
 }
 .chip p {
-  overflow-wrap: break-word !important;
-  text-overflow: unset !important;
-  white-space: normal !important;
+  overflow-wrap: break-word;
+  text-overflow: unset;
+  white-space: normal;
   word-break: break-word; /* Forces long words to break */
 }
 
