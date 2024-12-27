@@ -15,10 +15,10 @@ function DeleteDialog({ task, onDelete, onClose, isOpen }) {
             <p className={styles.dialogTitle}>{"Delete Task!"}</p>
           </div>
           <p>
-            Are you sure that you want to delete{" "}
-            <div>
-              <span>{task?.title}</span>?
-            </div>
+            Are you sure that you want to delete
+            <span className={styles.taskTitle}>
+              <span>{task?.title}</span> ?
+            </span>
           </p>
         </div>
         <div className={styles.actions}>

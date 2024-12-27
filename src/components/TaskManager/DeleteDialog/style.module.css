@@ -48,10 +48,13 @@
   color: #717298;
   line-height: 20px;
 }
-.dialogContent span {
+.dialogContent .taskTitle span {
   color: #000;
   font-weight: 600;
 }
 .dialogWrapper {
   padding: 20px;
+}
+.taskTitle {
+  display: block;
 }
