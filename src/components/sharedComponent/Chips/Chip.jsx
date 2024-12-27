@@ -7,7 +7,7 @@ function Chip({ text, onDelete, isRemovable }) {
       {isRemovable && (
         <span
           className={styles.deleteIcon}
-          onClick={() => onDelete()} // Trigger the delete function passed from parent
+          onClick={(e) => onDelete(e)} // Trigger the delete function passed from parent
         >
           &times;
         </span>
