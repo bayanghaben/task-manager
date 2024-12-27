@@ -3,7 +3,6 @@
   background-color: #fff;
   border-radius: 16px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   padding: 40px;
   gap: 30px;
@@ -15,5 +14,5 @@
 .filter h5 {
   color: #0c1049;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
 }
