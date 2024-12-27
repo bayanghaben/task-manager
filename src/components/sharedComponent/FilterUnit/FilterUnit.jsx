@@ -27,6 +27,7 @@ const FilterUnit = ({ title, filterOptions, onFilterChange, initialState }) => {
 
         {filterOptions.map((option) => (
           <RadioButtonWithLabel
+            key={option}
             value={option}
             className={styles.input}
             checked={currentSelection === option}
