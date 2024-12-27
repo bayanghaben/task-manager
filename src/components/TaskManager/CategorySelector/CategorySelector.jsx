@@ -63,7 +63,7 @@ const CategorySelector = ({
     if (selectedOptions?.length > 0) {
       onCategoryChange(selectedOptions);
     }
-  }, [selectedOptions]);
+  }, [selectedOptions, onCategoryChange]);
 
   const handleInputChange = (event) => {
     const value = event.target.value;
@@ -96,9 +96,13 @@ const CategorySelector = ({
   };
 
   const handleDeleteOption = (optionToDelete) => {
-    setAvailableOptions(
-      availableOptions.filter((option) => option !== optionToDelete)
+    setAvailableOptions((prevAvailableOptions) =>
+      prevAvailableOptions.filter((option) => option !== optionToDelete)
     );
+    setSelectedOptions((prevSelectedOptions) =>
+      prevSelectedOptions.filter((option) => option !== optionToDelete)
+    );
+
     onDeleteCategory(optionToDelete);
   };
 
