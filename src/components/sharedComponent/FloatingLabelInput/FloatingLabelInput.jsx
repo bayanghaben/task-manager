@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./style.module.css";
 
 const FloatingLabelInput = ({
@@ -7,7 +7,6 @@ const FloatingLabelInput = ({
   name,
   value,
   onChange,
-  placeholder,
   type = "text",
   required = false,
 }) => {
@@ -21,7 +20,7 @@ const FloatingLabelInput = ({
         className={styles.inputField}
         value={value}
         onChange={onChange}
-        placeholder=" " /* Important: This placeholder must be empty */
+        placeholder=" "
       />
       <label htmlFor={id} className={styles.label}>
         {label}
