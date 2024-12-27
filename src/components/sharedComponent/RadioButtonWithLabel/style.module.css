@@ -1,0 +1,44 @@
+.formControl {
+  font-size: 0.8rem;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  background-color: #fff;
+  font: inherit;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: #395bd3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 120ms ease-in-out;
+}
+
+input[type="radio"]:checked {
+  border-color: #395bd3;
+}
+
+input[type="radio"]:not(:checked) {
+  background-color: #f6f6ff;
+  border-color: #f6f6ff;
+}

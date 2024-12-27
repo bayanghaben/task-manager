@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./style.module.css"; // Import the styles
+import RadioButtonWithLabel from "../RadioButtonWithLabel/RadioButtonWithLabel";
 
 const FilterUnit = ({ title, filterOptions, onFilterChange, initialState }) => {
   const [currentSelection, setCurrentSelection] = useState(initialState);
@@ -15,30 +16,25 @@ const FilterUnit = ({ title, filterOptions, onFilterChange, initialState }) => {
   return (
     <div className={styles.filterContainer}>
       <h3>{title}</h3>
-      <label className={styles.label}>
-        <input
+      <div className={styles.labeledRadioButtonContainer}>
+        <RadioButtonWithLabel
           type="radio"
-          value={""}
           className={styles.input}
           checked={!currentSelection}
           onChange={handleAllChange}
+          label={"All"}
         />
-        <p> All</p>
-      </label>
 
-      {filterOptions.map((option) => (
-        <div key={option} className={styles.label}>
-          <input
-            style={{ fill: "red" }}
-            type="radio"
+        {filterOptions.map((option) => (
+          <RadioButtonWithLabel
             value={option}
             className={styles.input}
             checked={currentSelection === option}
             onChange={() => handleOptionChange(option)}
+            label={option}
           />
-          <p> {option}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
