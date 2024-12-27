@@ -63,7 +63,7 @@ const CategorySelector = ({
     if (selectedOptions?.length > 0) {
       onCategoryChange(selectedOptions);
     }
-  }, [selectedOptions, onCategoryChange]);
+  }, [selectedOptions]);
 
   const handleInputChange = (event) => {
     const value = event.target.value;
