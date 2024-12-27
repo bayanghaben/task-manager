@@ -13,7 +13,7 @@
   font-size: 16px;
   color: rgba(77, 77, 77, 0.5);
   transition: all 0.3s ease;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .inputField {
@@ -21,6 +21,7 @@
   padding: 15px;
   font-size: 16px;
   border: 1px solid #cccccc;
+  font-family: Quicksand, serif;
   border-radius: 8px;
   outline: none;
   box-sizing: border-box;

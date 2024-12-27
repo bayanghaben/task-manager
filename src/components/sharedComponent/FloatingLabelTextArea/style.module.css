@@ -11,9 +11,9 @@
   left: 15px;
   transform: translateY(-50%);
   font-size: 16px;
-  color: #8385af;
+  color: rgba(77, 77, 77, 0.5);
   transition: all 0.3s ease;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .textareaField {
@@ -24,9 +24,10 @@
   border-radius: 8px;
   outline: none;
   box-sizing: border-box;
-  min-height: 100px; 
+  min-height: 100px;
   resize: none;
   transition: all 0.3s ease;
+  font-family: Quicksand, serif;
 }
 
 .textareaField:focus {
