@@ -19,6 +19,8 @@ const CategorySelector = ({
   const dropdownRef = useRef(null);
   const addOptionRef = useRef(null);
   const chipContainerRef = useRef(null);
+  const inputRef = useRef(null);
+
   const [inputHeight, setInputHeight] = useState(0);
 
   const handleCloseDropdown = (e) => {
@@ -87,6 +89,10 @@ const CategorySelector = ({
   };
 
   const handleInputClick = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+
     setIsDropdownOpen((prev) => !prev);
     setIsAddNewOption(false);
   };
@@ -135,6 +141,7 @@ const CategorySelector = ({
           <div className={styles.inputContainer}>
             <input
               type="text"
+              ref={inputRef} 
               className={styles.input}
               placeholder=" "
               onClick={handleInputClick}
@@ -167,7 +174,7 @@ const CategorySelector = ({
                   }`}
                   onClick={() => handleSelect(option)}
                 >
-                  <span>{option}</span>
+                  <p>{option}</p>
                   <span
                     className={styles.deleteIcon}
                     onClick={(e) => {
