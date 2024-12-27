@@ -8,7 +8,7 @@ const CategorySelector = ({
   onDeleteCategory,
   onAddCategory,
   currentCategories,
-  onCategoryChange, // Handle category change here
+  onCategoryChange,
 }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [newOption, setNewOption] = useState("");
@@ -18,6 +18,8 @@ const CategorySelector = ({
 
   const dropdownRef = useRef(null);
   const addOptionRef = useRef(null);
+  const chipContainerRef = useRef(null);
+  const [inputHeight, setInputHeight] = useState(0);
 
   const handleCloseDropdown = (e) => {
     if (
@@ -35,11 +37,19 @@ const CategorySelector = ({
       document.removeEventListener("click", handleCloseDropdown);
     };
   }, []);
+
   useEffect(() => {
     if (currentCategories?.length > 0) {
       setSelectedOptions(currentCategories);
     }
   }, [currentCategories]);
+
+  useEffect(() => {
+    if (chipContainerRef.current) {
+      setInputHeight(chipContainerRef.current.offsetHeight + 15); // Set input height based on chip container height
+    }
+  }, [selectedOptions]);
+
   const handleSelect = (option) => {
     if (selectedOptions.includes(option)) {
       setSelectedOptions(selectedOptions.filter((item) => item !== option));
@@ -48,6 +58,7 @@ const CategorySelector = ({
     }
     setNewOption("");
   };
+
   useEffect(() => {
     if (selectedOptions?.length > 0) {
       onCategoryChange(selectedOptions);
@@ -76,7 +87,7 @@ const CategorySelector = ({
   };
 
   const handleInputClick = () => {
-    setIsDropdownOpen(true);
+    setIsDropdownOpen((prev) => !prev);
     setIsAddNewOption(false);
   };
 
@@ -101,6 +112,7 @@ const CategorySelector = ({
         <div className={styles.inputWrapper}>
           <div
             className={styles.chipContainer}
+            ref={chipContainerRef}
             onClick={handleInputClick}
             onChange={handleInputChange}
           >
@@ -108,7 +120,10 @@ const CategorySelector = ({
               <Chip
                 key={index}
                 text={chip}
-                onDelete={() => handleDeleteChip(chip)}
+                onDelete={(e) => {
+                  e.stopPropagation();
+                  handleDeleteChip(chip);
+                }}
                 isRemovable={true}
               />
             ))}
@@ -117,10 +132,11 @@ const CategorySelector = ({
             <input
               type="text"
               className={styles.input}
-              placeholder=" " /* Keep it blank for the floating label effect */
+              placeholder=" "
               onClick={handleInputClick}
               onChange={handleInputChange}
               readOnly
+              style={{ height: inputHeight }}
             />
             <label
               className={`${styles.label} ${
