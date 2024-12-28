@@ -41,6 +41,11 @@
   --deleteIcon-bg: #f9f9f9;
 
   --scrollbar-thumb-hover-color: #2b4693;
+  --add-btn-gradient-start: #5a7dfb;
+  --add-btn-gradient-mid: #4f70e8;
+  --add-btn-gradient-end: #2743a5;
+
+  --add-btn-box-shadow-color: #395bd340;
 
   --box-shadow: #c1c1c140;
 }
