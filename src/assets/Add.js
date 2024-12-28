@@ -5,19 +5,19 @@ function Add() {
     <svg
       width="24"
       height="24"
-      viewBox="0 0 37 36"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M18.5 31.5C25.9558 31.5 32 25.4558 32 18C32 10.5442 25.9558 4.5 18.5 4.5C11.0442 4.5 5 10.5442 5 18C5 25.4558 11.0442 31.5 18.5 31.5Z"
+        d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
         stroke="white"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M23 18H14M18.5 22.5L18.5 13.5"
+        d="M15 12H9M12 15L12 9"
         stroke="white"
         strokeWidth="1.5"
         strokeLinecap="round"
