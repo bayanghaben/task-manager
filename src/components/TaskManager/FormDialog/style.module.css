@@ -1,5 +1,5 @@
 .dialogTitle {
-  color: #0c1049;
+  color: var(--drak);
   font-size: 32px;
   font-weight: 700;
 }
@@ -18,12 +18,12 @@
   border-radius: 8px;
 }
 .cancelBtn {
-  background-color: #f2f5ff;
-  color: #395bd3;
+  background-color: var(--cancel-bg);
+  color: var(--primary-color);
 }
 .submitBtn {
-  color: #fff;
-  background-color: #395bd3;
+  color: var(--white);
+  background-color: var(--primary-color);
 }
 
 .formGroup {

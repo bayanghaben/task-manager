@@ -1,16 +1,16 @@
 .complete {
-  background-color: #e1ffde;
-  color: #0a7900;
+  background-color: var(--status-completed-bg);
+  color: var(--status-completed);
 }
 .incomplete {
-  background-color: #fff2de;
-  color: #ff6b00;
+  background-color: var(--status-incomplete-bg);
+  color: var(--status-incomplete);
 }
 .incompleteCircle {
-  background-color: #ff6b00;
+  background-color: var(--status-incomplete);
 }
 .completeCircle {
-  background-color: #0a7900;
+  background-color: var(--status-completed);
 }
 .dropdown {
   position: relative;
@@ -60,7 +60,7 @@
   top: 100%;
   left: 0;
   width: 150px;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 8px;
   list-style: none;
   margin: 0;
@@ -82,12 +82,12 @@
   cursor: pointer;
 }
 .selected {
-  background-color: #f7f9ff;
-  border: 1px solid #395bd3;
+  background-color: var(--background-selected);
+  border: 1px solid var(--primary-color);
   border-radius: 4px;
 }
 .menu li:hover {
-  background-color: #f0f0f0;
+  background-color: var(--background-hover-light);
   border-radius: 4px;
 }
 
@@ -99,9 +99,9 @@
 }
 
 .completeCircle {
-  background-color: #0a7900;
+  background-color: var(--status-completed);
 }
 
 .incompleteCircle {
-  background-color: #ff6b00;
+  background-color: var(--status-incomplete);
 }

@@ -1,0 +1,46 @@
+:root {
+  --primary-color: #395bd3;
+  --secondary-color: #f6f6ff;
+
+  --black: #000000;
+  --white: #ffffff;
+  --gray-light: #dcdcdc;
+  --gray-dark: #7f8c8d;
+
+  --status-completed: #0a7900;
+  --status-incomplete: #ff6b00;
+  --status-completed-bg: #e1ffde;
+  --status-incomplete-bg: #fff2de;
+
+  --background-light: #ecf0ff;
+  --background-dark: #2c3e50;
+  --background-delete-dialog-img: #e6e6ff;
+  --background-hover-light: #f0f0f0;
+  --background-selected: #f7f9ff;
+  --background-dropdown-hover: #f5f5f5a6;
+  --background-selected-hover: #cfd6ea;
+
+  --button-primary: #3498db;
+  --button-secondary: #2ecc71;
+
+  --text-primary: #2c3e50;
+  --text-secondary: #95a5a6;
+
+  --border-light: #bdc3c7;
+  --border-dark: #34495e;
+
+  --cancel-bg: #f2f5ff;
+  --task-desc-text: #dfe1ff;
+  --inputs-border-label-color: #8385af;
+  --deleteIcon: #a8b1d3;
+  --deleteIcon-hover: #67739e;
+
+  --delete: #ff3093;
+  --dark: #0c1049;
+  --required-color: #fe7c98;
+  --deleteIcon-bg: #f9f9f9;
+
+  --scrollbar-thumb-hover-color: #2b4693;
+
+  --box-shadow: #c1c1c140;
+}

@@ -31,7 +31,7 @@
 }
 
 .textareaField:focus {
-  border-color: #395bd3;
+  border-color: var(--primary-color);
 }
 
 .textareaField:focus + .label,
@@ -39,10 +39,10 @@
   top: 0;
   left: 10px;
   font-size: 12px;
-  color: #8385af;
+  color: var(--inputs-border-label-color);
   background: white;
   padding: 0 5px;
 }
 .required {
-  color: #fe7c98;
+  color: var(--required-color);
 }
