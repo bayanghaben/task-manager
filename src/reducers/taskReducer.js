@@ -1,3 +1,5 @@
+import constants from "../constants";
+
 export const initialState = {
   tasks: [
     {
@@ -34,7 +36,7 @@ export const initialState = {
     },
   ],
   categories: ["Work", "Personal", "Urgent"],
-  statuses: ["Incomplete", "Completed"], // Adding statuses here
+  statuses: [constants.taskStatus.completed, constants.taskStatus.inComplteted],
 
   filter: { category: "", completed: null },
 };
@@ -70,8 +72,8 @@ export const taskReducer = (state, action) => {
       return {
         ...state,
         tasks: state.tasks.map((task) =>
-          task.id === action.payload
-            ? { ...task, completed: !task.completed }
+          task.id === action.payload.id
+            ? { ...task, completed: action.payload.completed }
             : task
         ),
       };
