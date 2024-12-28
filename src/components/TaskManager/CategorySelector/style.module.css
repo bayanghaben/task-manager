@@ -1,3 +1,4 @@
+@import "../../../styles/colors.css"; /* Import color variables */
 .multiSelectContainer {
   width: 100%;
   max-width: 500px;
@@ -29,7 +30,7 @@
 }
 
 .chipContainer::-webkit-scrollbar-thumb {
-  background-color: #395bd3;
+  background-color: var(--primary-color);
   border-radius: 4px;
   border: 2px solid #f1f1f1;
 }
@@ -44,7 +45,7 @@
 }
 
 .input:focus {
-  border-color: #395bd3;
+  border-color: var(--primary-color);
 }
 
 .chipContainer {
@@ -129,7 +130,7 @@
 
 .addOptionButton {
   padding: 8px 16px;
-  background-color: #395bd3;
+  background-color: var(--primary-color);
   color: white;
   font-size: 16px;
   border: none;
@@ -211,7 +212,7 @@
 }
 
 .input:focus {
-  border-color: #395bd3;
+  border-color: var(--primary-color);
 }
 .input {
   outline: none;

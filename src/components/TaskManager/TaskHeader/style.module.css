@@ -1,5 +1,7 @@
+@import "../../../styles/colors.css"; /* Import color variables */
+
 .titleContainer {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 16px;
   height: 100px;
   grid-column: 2 / 12; /* Spans across all 12 columns */

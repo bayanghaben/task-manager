@@ -1,3 +1,4 @@
+@import "../../../styles/colors.css"; /* Import color variables */
 .taskItem {
   background-color: #fff;
   border-radius: 16px;
@@ -28,8 +29,8 @@
   position: absolute; /* Position relative to the container */
   top: 33%; /* Place the box just below the text */
   left: 0; /* Center the box horizontally */
-  background-color: #0c1049; /* Box background color */
-  color: #dfe1ff;
+  background-color: var(--dark); /* Box background color */
+  color: var(--task-desc-tex);
   padding: 10px; /* Add padding for the box */
   border-radius: 5px; /* Optional: Add rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
@@ -49,7 +50,7 @@
   left: 0;
   border-left: 12px solid transparent; /* Left side of the arrow */
   border-right: 12px solid transparent; /* Right side of the arrow */
-  border-bottom: 12px solid #0c1049; /* The arrow pointing down */
+  border-bottom: 12px solid var(--dark); /* The arrow pointing down */
   z-index: -1;
   margin: 0;
 }

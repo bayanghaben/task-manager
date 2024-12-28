@@ -1,8 +1,8 @@
-body {
-  width: 100%;
-}
-html{
-    --primary-color: : #395BD3; /* Blue */ /* Blue */
+/* src/styles/colors.css */
+
+/* Primary Colors */
+html {
+  --primary-color: : #395BD3; /* Blue */ /* Blue */
   --secondary-color: #F6F6FF; /* Green */
   --tertiary-color: #f6f6ff; /* Yellow */
 
@@ -51,5 +51,6 @@ html{
   /* src/styles/colors.css */
 
 /* Title Container */
+
 
 }

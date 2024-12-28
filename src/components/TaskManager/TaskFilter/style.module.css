@@ -1,6 +1,8 @@
+@import "../../../styles/colors.css"; /* Import color variables */
+
 .filter {
   grid-column: 2/4;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -12,7 +14,7 @@
   min-height: 500px;
 }
 .filter h5 {
-  color: #0c1049;
+  color: var(--dark);
   font-size: 18px;
   font-weight: 600;
 }

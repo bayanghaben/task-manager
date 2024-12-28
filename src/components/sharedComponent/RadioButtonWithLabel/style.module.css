@@ -1,3 +1,4 @@
+@import "../../../styles/colors.css"; /* Import color variables */
 .formControl {
   font-size: 0.8rem;
   line-height: 1.1;
@@ -26,7 +27,7 @@ input[type="radio"]:checked::before {
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 50%;
-  background-color: #395bd3;
+  background-color: var(--primary-color);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -35,10 +36,10 @@ input[type="radio"]:checked::before {
 }
 
 input[type="radio"]:checked {
-  border-color: #395bd3;
+  border-color: var(--primary-color);
 }
 
 input[type="radio"]:not(:checked) {
-  background-color: #f6f6ff;
-  border-color: #f6f6ff;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }

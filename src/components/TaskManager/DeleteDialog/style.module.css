@@ -1,3 +1,4 @@
+@import "../../../styles/colors.css"; /* Import color variables */
 .imgContainer {
   backdrop-filter: blur(150px);
   background-color: #e6e6ff;
@@ -33,11 +34,11 @@
 }
 .cancelBtn {
   background-color: #f2f5ff;
-  color: #395bd3;
+  color: var(--primary-color);
 }
 .deleteBtn {
   color: #fff;
-  background-color: #ff3093;
+  background-color: var(--delete);
 }
 .dialogContent {
   display: flex;

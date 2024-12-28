@@ -1,10 +1,11 @@
+@import "../../../styles/colors.css"; /* Import color variables */
 .taskActions {
   display: flex;
   gap: 10px;
   align-items: flex-end;
 }
 .iconBtn {
-  background-color: #f6f6ff;
+  background-color: var(--secondary-color);
   width: 30px;
   height: 30px;
   border-radius: 6px;

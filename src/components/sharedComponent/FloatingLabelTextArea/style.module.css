@@ -1,3 +1,4 @@
+@import "../../../styles/colors.css"; /* Import color variables */
 .formGroup {
   position: relative;
   display: flex;
@@ -31,7 +32,7 @@
 }
 
 .textareaField:focus {
-  border-color: #395bd3;
+  border-color: var(--primary-color);
 }
 
 .textareaField:focus + .label,
@@ -44,5 +45,5 @@
   padding: 0 5px;
 }
 .required {
-  color: #fe7c98;
+  color: var(--required-color);
 }

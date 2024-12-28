@@ -1,10 +1,11 @@
+@import "../../../styles/colors.css"; /* Import color variables */
 .chip {
   padding: 5px 10px;
   font-size: 10px;
   pointer-events: all;
-  background: #f6f6ff;
-  border: 1px solid #395bd3;
-  color: #395bd3;
+  background: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
   border-radius: 50px;
   min-width: 100px;
   min-height: 26px;
