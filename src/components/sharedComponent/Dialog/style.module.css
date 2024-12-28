@@ -14,7 +14,7 @@
 
 /* The dialog box */
 .dialog {
-  background-color: white;
+  background-color: var(--white);
   border-radius: 24px;
   width: 500px;
   max-width: 90%; /* Responsive width */

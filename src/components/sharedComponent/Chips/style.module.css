@@ -1,4 +1,3 @@
-@import "../../../styles/colors.css"; /* Import color variables */
 .chip {
   padding: 5px 10px;
   font-size: 10px;
@@ -24,10 +23,10 @@
 .deleteIcon {
   margin-left: 8px;
   cursor: pointer;
-  color: #a8b1d3;
+  color: var(--deleteIcon);
   font-size: 18px;
 }
 
 .deleteIcon:hover {
-  color: #67739e;
+  color: var(--deleteIcon-hover);
 }

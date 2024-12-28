@@ -1,7 +1,6 @@
-@import "../../../styles/colors.css"; /* Import color variables */
 .imgContainer {
   backdrop-filter: blur(150px);
-  background-color: #e6e6ff;
+  background-color: var(--background-delete-dialog-img);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +9,7 @@
   padding: 20px;
 }
 .dialogTitle {
-  color: #0c1049;
+  color: var(--dark);
   font-size: 32px;
   font-weight: 700;
 }
@@ -33,11 +32,11 @@
   justify-content: center;
 }
 .cancelBtn {
-  background-color: #f2f5ff;
+  background-color: var(--cancel-bg);
   color: var(--primary-color);
 }
 .deleteBtn {
-  color: #fff;
+  color: var(--white);
   background-color: var(--delete);
 }
 .dialogContent {
@@ -50,7 +49,7 @@
   line-height: 20px;
 }
 .dialogContent .taskTitle span {
-  color: #000;
+  color: var(--black);
   font-weight: 600;
 }
 .dialogWrapper {

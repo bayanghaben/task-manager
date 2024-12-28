@@ -1,6 +1,5 @@
-@import "../../../styles/colors.css"; /* Import color variables */
 .button {
-  background-color: --primary-color;
+  background-color: var(--primary-color);
   height: 40px;
   width: 154px;
   display: flex;
@@ -21,7 +20,7 @@
 }
 
 .button p {
-  color: #fff;
+  color: var(--white);
   font-family: quicksand, serif;
   font-weight: 500;
   font-size: 18px;

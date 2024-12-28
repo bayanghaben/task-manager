@@ -1,10 +1,9 @@
-@import "../../../styles/colors.css"; /* Import color variables */
 .taskItem {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 16px;
   min-height: 100px;
   padding: 10px;
-  box-shadow: 0px 4px 16px 0px #c1c1c140;
+  box-shadow: 0px 4px 16px 0px var(--box-shadow);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -30,7 +29,7 @@
   top: 33%; /* Place the box just below the text */
   left: 0; /* Center the box horizontally */
   background-color: var(--dark); /* Box background color */
-  color: var(--task-desc-tex);
+  color: var(--task-desc-text);
   padding: 10px; /* Add padding for the box */
   border-radius: 5px; /* Optional: Add rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */

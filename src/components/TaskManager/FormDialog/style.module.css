@@ -1,4 +1,3 @@
-@import "../../../styles/colors.css"; /* Import color variables */
 .dialogTitle {
   color: var(--drak);
   font-size: 32px;
