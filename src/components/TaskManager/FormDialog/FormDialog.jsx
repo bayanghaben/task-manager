@@ -18,7 +18,7 @@ const FormDialog = ({
   onClose,
   onAddTask,
   onEditTask,
-  task, 
+  task,
   categories,
   onAddCategory,
   onDeleteCategory,
@@ -35,12 +35,6 @@ const FormDialog = ({
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    if (name === "title") {
-      const trimmedValue = value.trim();
-      if (trimmedValue === "") {
-        return; 
-      }
-    }
     setTaskData({
       ...taskData,
       [name]: value,
@@ -57,12 +51,12 @@ const FormDialog = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     if (task) {
-      onEditTask(debouncedTaskData); 
+      onEditTask(debouncedTaskData);
     } else {
-      onAddTask(debouncedTaskData); 
+      onAddTask(debouncedTaskData);
     }
-    onClose(); 
-    setTaskData(initialState); 
+    onClose();
+    setTaskData(initialState);
   };
 
   return (

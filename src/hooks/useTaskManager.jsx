@@ -30,23 +30,35 @@ const useTaskManager = () => {
 
   const handleAddTask = useCallback(
     (task) => {
+      const trimmedTask = Object.fromEntries(
+        Object.entries(task).map(([key, value]) =>
+          typeof value === "string" ? [key, value.trim()] : [key, value]
+        )
+      );
+
       const wrappedAction = withLoadingTimeout((task) => {
         dispatch({
           type: taskActions.addTask,
-          payload: { ...task, id: Date.now(), completionId: 1 },
+          payload: { ...task, id: Date.now() },
         });
       });
-      wrappedAction(task);
+      wrappedAction(trimmedTask);
     },
     [dispatch]
   );
 
   const handleEditTask = useCallback(
     (task) => {
+      const trimmedTask = Object.fromEntries(
+        Object.entries(task).map(([key, value]) =>
+          typeof value === "string" ? [key, value.trim()] : [key, value]
+        )
+      );
+
       const wrappedAction = withLoadingTimeout((task) => {
         dispatch({ type: taskActions.editTask, payload: task });
       });
-      wrappedAction(task);
+      wrappedAction(trimmedTask);
     },
     [dispatch]
   );
@@ -145,7 +157,7 @@ const useTaskManager = () => {
     handleStatusChange,
     handleAddCategory,
     handleDeleteCategory,
-    handleFilter, 
+    handleFilter,
   };
 };
 
