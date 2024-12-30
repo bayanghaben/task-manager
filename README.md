@@ -1,3 +1,32 @@
+# Admin Task Management Application
+
+## Overview
+
+The **Admin Task Management Application** allows users to create, edit, delete, and organize tasks into categories, providing an intuitive interface for managing tasks. It also features a clean and maintainable architecture, following best practices in React development. The app includes filtering and task completion tracking to streamline task management.
+
+## Features
+
+- **Task Management**: Create, edit, delete, and organize tasks into categories.
+- **Task Completion**: Mark tasks as complete and manage their status.
+- **Filter**: Filter tasks by completion status or category.
+- **Category Selector**: Easily select and remove categories from a list.
+- **Dialogs**: Use reusable dialog components for adding, editing, and deleting tasks.
+- **Debouncing**: Efficiently handles user actions with 400ms debounce time.
+- **Loading Indicators**: Displays loading indicators during actions like adding or updating tasks.
+- **State Management**: The app uses prop drilling for state management to maintain clean architecture without using Context API or Redux.
+- **No Component or Style Libraries**: No pre-built component or style libraries are used. The application is built from scratch with custom components and styles.
+
+## Demo
+
+You can view the live demo of the application on Netlify:
+
+[Live Demo on Netlify]([https://your-netlify-link](https://task-manager-bayan-v2.netlify.app/))
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
