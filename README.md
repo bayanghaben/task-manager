@@ -20,7 +20,7 @@ The **Admin Task Management Application** allows users to create, edit, delete, 
 
 You can view the live demo of the application on Netlify:
 
-[Live Demo on Netlify]([https://your-netlify-link](https://task-manager-bayan-v2.netlify.app/))
+[Live Demo on Netlify](https://task-manager-bayan-v2.netlify.app/)
 
 
 
